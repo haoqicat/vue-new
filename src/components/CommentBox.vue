@@ -1,6 +1,8 @@
 <template>
   <div class="comment-box">
-    {{ comment }}
+    <div v-for="comment in comments">
+      {{ comment }}
+    </div>
   </div>
 </template>
 
@@ -8,7 +10,10 @@
   export default {
     name: 'CommentBox',
     data: () => ({
-      comment: 'my comment'
+      comments: [
+        '评论1',
+        '评论2'
+      ]
     })
   }
 </script>
