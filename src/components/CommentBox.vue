@@ -1,12 +1,15 @@
 <template>
   <div class="comment-box">
-    CommentBox
+    {{ comment }}
   </div>
 </template>
 
 <script>
   export default {
-    name: 'CommentBox'
+    name: 'CommentBox',
+    data: () => ({
+      comment: 'my comment'
+    })
   }
 </script>
 
