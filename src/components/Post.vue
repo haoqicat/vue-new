@@ -1,7 +1,11 @@
 <template>
   <div class="post">
-    <PostBody />
-    <CommentBox />
+    <div class="upper">
+      <PostBody />
+    </div>
+    <div class="bottom">
+      <CommentBox />
+    </div>
   </div>
 </template>
 
@@ -20,6 +24,18 @@
 
 <style scoped>
   .post {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .upper {
+    display: flex;
+    min-height: 40vh;
     background-color: #00bcd4;
+  }
+  .bottom {
+    display: flex;
+    flex-grow: 1;
+    background-color: rgba(240, 240, 240, .5);
   }
 </style>
