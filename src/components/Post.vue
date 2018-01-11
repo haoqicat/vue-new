@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="post">
     <PostBody />
     <CommentBox />
   </div>
@@ -17,3 +17,9 @@
     }
   }
 </script>
+
+<style scoped>
+  .post {
+    background-color: #00bcd4;
+  }
+</style>
