@@ -1,5 +1,6 @@
 <template>
   <div class="comment-box">
+    <input v-model="message" placeholder="请填写评论" />
     <button @click="submitComment">提交</button>
     <div v-bind:key="comment.id" v-for="comment in reversedComments">
       {{ comment.body }}
@@ -11,6 +12,7 @@
   export default {
     name: 'CommentBox',
     data: () => ({
+      message: '',
       comments: [
         {
           id: '1',
@@ -27,7 +29,8 @@
     },
     methods: {
       submitComment () {
-        console.log('submitComment')
+        console.log('submitComment', this.message)
+        this.message = ''
       }
     }
   }
