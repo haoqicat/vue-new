@@ -30,6 +30,11 @@
     methods: {
       submitComment () {
         console.log('submitComment', this.message)
+        let comment = {
+          id: '3',
+          body: this.message
+        }
+        this.comments.push(comment)
         this.message = ''
       }
     }
