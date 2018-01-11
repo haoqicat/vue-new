@@ -1,7 +1,7 @@
 <template>
   <div class="comment-box">
-    <div v-for="comment in comments">
-      {{ comment }}
+    <div v-bind:key="comment.id" v-for="comment in comments">
+      {{ comment.body }}
     </div>
   </div>
 </template>
@@ -11,8 +11,14 @@
     name: 'CommentBox',
     data: () => ({
       comments: [
-        '评论1',
-        '评论2'
+        {
+          id: '1',
+          body: '评论1'
+        },
+        {
+          id: '2',
+          body: '评论2'
+        }
       ]
     })
   }
