@@ -25,7 +25,7 @@
       ]
     }),
     computed: {
-      reversedComments: function () { return this.comments.reverse() }
+      reversedComments: function () { return this.comments.slice().reverse() }
     },
     methods: {
       submitComment () {
