@@ -1,7 +1,7 @@
 <template>
   <div class="post">
     <div class="upper">
-      <PostBody title="Git 技巧" />
+      <PostBody :title="title" />
     </div>
     <div class="bottom">
       <CommentBox />
@@ -15,6 +15,9 @@
   
   export default {
     name: 'Post',
+    data: () => ({
+      title: 'React 技巧'
+    }),
     components: {
       PostBody,
       CommentBox
