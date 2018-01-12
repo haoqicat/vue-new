@@ -4,8 +4,10 @@
       <input v-model="message" placeholder="请填写评论" />
       <button @click="submitComment">提交</button>
     </div>
-    <div v-bind:key="comment.id" v-for="comment in reversedComments">
-      {{ comment.body }}
+    <div class="list">
+      <div v-bind:key="comment.id" v-for="comment in reversedComments">
+        {{ comment.body }}
+      </div>
     </div>
   </div>
 </template>
@@ -54,6 +56,15 @@
   }
   .comment-form {
     display: flex;
+  }
+
+  .list {
+    margin-top: 20px;
+  }
+
+  .list > div {
+    border-bottom: 1px solid rgba(0, 0, 0, .4);
+    padding: 5px;
   }
 
   .comment-form input {
