@@ -31,7 +31,7 @@
       submitComment () {
         console.log('submitComment', this.message)
         let comment = {
-          id: '3',
+          id: (this.comments.length + 1 ).toString(),
           body: this.message
         }
         this.comments.push(comment)
