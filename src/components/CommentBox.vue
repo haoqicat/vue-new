@@ -24,12 +24,11 @@
     },
     methods: {
       submitComment () {
-        console.log('submitComment', this.message)
         let comment = {
           id: (this.comments.length + 1 ).toString(),
           body: this.message
         }
-        this.comments.push(comment)
+        this.$store.dispatch({ type: 'addComment', comment })
         this.message = ''
       }
     }
