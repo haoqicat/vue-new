@@ -16,20 +16,11 @@
   export default {
     name: 'CommentBox',
     data: () => ({
-      message: '',
-      comments: [
-        {
-          id: '1',
-          body: '评论1'
-        },
-        {
-          id: '2',
-          body: '评论2'
-        }
-      ]
+      message: ''
     }),
     computed: {
-      reversedComments: function () { return this.comments.slice().reverse() }
+      comments() { return this.$store.state.comment.all },
+      reversedComments() { return this.comments.slice().reverse() }
     },
     methods: {
       submitComment () {
