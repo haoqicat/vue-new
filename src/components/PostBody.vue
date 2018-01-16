@@ -21,9 +21,7 @@
         return this.post
       },
       commentCount() { 
-        return this.$store.state.comment.all.filter(
-          t => t.post === this.postId
-        ).length 
+        return this.$store.getters.getComments(this.postId).length 
         },
       post() {
         return this.$store.state.post.all.find(

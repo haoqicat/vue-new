@@ -36,8 +36,15 @@ const actions = {
   }
 }
 
+const getters = {
+  getComments: (state) => (id) => {
+    return state.all.filter(t => t.post === id)
+  }
+}
+
 export default {
   state,
   mutations,
-  actions
+  actions,
+  getters
 }
