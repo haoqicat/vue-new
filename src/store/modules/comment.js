@@ -17,7 +17,8 @@ const actions = {
   addComment({ commit }, { comment } ) {
     console.log('I am a action', comment)
     const uri = 'http://localhost:3008/comments'
-    axios.post(uri, { body: comment.body }).then(res => {
+    const { body } = comment
+    axios.post(uri, { body }).then(res => {
       console.log('res', res.data)
     })
     commit('addComment', comment)
