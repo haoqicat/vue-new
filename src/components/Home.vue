@@ -1,8 +1,10 @@
 <template>
   <div class="home">
-    <h1>Home</h1>
-    {{ posts }}
-    <router-link to="post/123">Post123</router-link>
+    <ul>
+      <li :key="post.id" v-for="post in posts">
+        <router-link :to="'post/' + post.id">{{ post.title }}</router-link>
+      </li>
+    </ul>
   </div>
 </template>
 
