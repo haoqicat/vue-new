@@ -1,6 +1,6 @@
 <template>
   <div class="post-body">
-    <h1>{{ postId }}</h1>
+    <h1>{{ post.title }}</h1>
     <div class="comment-count">
       {{ commentCount }}评论
     </div>
@@ -12,7 +12,12 @@
     name: 'PostBody',
     props: ['postId'],
     computed: {
-      commentCount() { return this.$store.state.comment.all.length }
+      commentCount() { return this.$store.state.comment.all.length },
+      post() {
+        return this.$store.state.post.all.find(
+          t => t.id === this.postId
+        )
+      }
     }
   }
 </script>
@@ -25,6 +30,13 @@
     margin: 20px auto;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
     position: relative;
+    display: flex;
+  }
+
+  .post-body h1 {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px; 
   }
 
   .comment-count {
