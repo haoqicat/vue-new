@@ -11,6 +11,9 @@ export default {
   name: 'app',
   components: {
     Post
+  },
+  created() {
+    this.$store.dispatch({ type: 'loadComments' })
   }
 }
 </script>
