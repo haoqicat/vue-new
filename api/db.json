@@ -1,4 +1,14 @@
 {
+  "posts": [
+    {
+      "id": "123",
+      "title": "Git 技巧"
+    },
+    {
+      "id": "234",
+      "title": "React 技巧"
+    }
+  ],
   "comments": [
     {
       "id": "1",
