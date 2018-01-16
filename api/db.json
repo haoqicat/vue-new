@@ -12,27 +12,18 @@
   "comments": [
     {
       "id": "1",
-      "body": "评论1"
+      "body": "评论1",
+      "post": "123"
     },
     {
       "id": "2",
-      "body": "评论2"
+      "body": "评论2",
+      "post": "123"
     },
     {
       "body": "hello",
-      "id": "HJPNS0cNf"
-    },
-    {
-      "body": "123",
-      "id": "SkV_B0cVM"
-    },
-    {
-      "body": "222",
-      "id": "ByT3dCc4M"
-    },
-    {
-      "body": "是是是",
-      "id": "SysQhA5Ef"
+      "id": "HJPNS0cNf",
+      "post": "234"
     }
   ]
 }
