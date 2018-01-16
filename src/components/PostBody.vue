@@ -3,6 +3,9 @@
     <div v-if="show">
       <h1>{{ post.title }}</h1>
     </div>
+    <div v-else>
+      加载中...
+    </div>
     <div class="comment-count">
       {{ commentCount }}评论
     </div>

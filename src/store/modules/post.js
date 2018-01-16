@@ -16,7 +16,11 @@ const actions = {
     axios.get(uri).then(
       res => {
         const posts = res.data
-        commit('loadPosts', posts)
+        setTimeout(
+          () => commit('loadPosts', posts)
+          ,
+          2000
+        )
       }
     )
   }
