@@ -19,7 +19,14 @@
       message: ''
     }),
     computed: {
-      comments() { return this.$store.state.comment.all },
+      postId() {
+        return this.$route.params.id
+      },
+      comments() {  
+        return this.$store.state.comment.all.filter(
+          t => t.post === this.postId
+        ) 
+      },
       reversedComments() { return this.comments.slice().reverse() }
     },
     methods: {
