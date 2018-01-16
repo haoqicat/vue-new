@@ -14,6 +14,7 @@ export default {
   },
   created() {
     this.$store.dispatch({ type: 'loadComments' })
+    this.$store.dispatch({ type: 'loadPosts' })
   }
 }
 </script>
