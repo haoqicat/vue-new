@@ -32,7 +32,8 @@
     methods: {
       submitComment () {
         let comment = {
-          body: this.message
+          body: this.message,
+          post: this.postId
         }
         this.$store.dispatch({ type: 'addComment', comment })
         this.message = ''
