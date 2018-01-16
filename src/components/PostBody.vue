@@ -22,7 +22,7 @@
       },
       commentCount() { 
         return this.$store.getters.getComments(this.postId).length 
-        },
+      },
       post() {
         return this.$store.state.post.all.find(
           t => t.id === this.postId

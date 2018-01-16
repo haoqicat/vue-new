@@ -44,7 +44,6 @@ li {
   list-style: none;
   background-color: #fff;
   margin: 20px 0;
-  padding: 10px;
 }
 
 li:hover {
@@ -54,5 +53,7 @@ li:hover {
 
 li a {
   color: #212121;
+  display: block;
+  padding: 10px;
 }
 </style>
