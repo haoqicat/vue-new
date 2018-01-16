@@ -1,6 +1,8 @@
 <template>
   <div class="post-body">
-    <h1>{{ post.title }}</h1>
+    <div v-if="show">
+      <h1>{{ post.title }}</h1>
+    </div>
     <div class="comment-count">
       {{ commentCount }}评论
     </div>
@@ -12,6 +14,9 @@
     name: 'PostBody',
     props: ['postId'],
     computed: {
+      show() {
+        return this.post
+      },
       commentCount() { return this.$store.state.comment.all.length },
       post() {
         return this.$store.state.post.all.find(
@@ -31,11 +36,10 @@
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
     position: relative;
     display: flex;
+    justify-content: space-around;
   }
 
   .post-body h1 {
-    text-align: center;
-    width: 100%;
     margin-top: 20px; 
   }
 
