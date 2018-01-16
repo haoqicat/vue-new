@@ -20,7 +20,11 @@
       show() {
         return this.post
       },
-      commentCount() { return this.$store.state.comment.all.length },
+      commentCount() { 
+        return this.$store.state.comment.all.filter(
+          t => t.post === this.postId
+        ).length 
+        },
       post() {
         return this.$store.state.post.all.find(
           t => t.id === this.postId
