@@ -25,7 +25,6 @@
     methods: {
       submitComment () {
         let comment = {
-          id: (this.comments.length + 1 ).toString(),
           body: this.message
         }
         this.$store.dispatch({ type: 'addComment', comment })
